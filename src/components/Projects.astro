@@ -43,17 +43,33 @@ const PROJECTS = [
    },
    {
     title: "Tic-Tac-Toe",
-    description: "3 en raya creado con React",
+    description: "3 en raya creado con React para practicar sus conceptos básicos.",
     link:'https://resplendent-malasada-dc4e00.netlify.app/',
     github:'https://github.com/Ger2k/TicTacToe',
     image: "/projects/TicTac.jpg",
     tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.REACT],
+   },
+   {
+    title: "API de gestión de películas",
+    description: "Aplicación web basada en Node.js (mediante java-script vanilla) que mediante el framework Express.js permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) en una colección de películas almacenadas en una base de datos. Proyecto final del curso Full-Stack en la Escuela CEI.",
+    link:'https://proyectofs.onrender.com/',
+    github:'https://github.com/Ger2k/TicTacToe',
+    image: "/projects/Peliculas.jpg",
+    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
+   },
+   {
+    title: "Fanweb de videojuegos independientes",
+    description: "Mi primera web, una presentación de 3 videojuegos, cada uno con su estilo propio. Trabajo final para el curso de Diseño Web en la Escuela CEI.",
+    link:'https://idyllic-fenglisu-5c0cb1.netlify.app/',
+    github:'https://github.com/Ger2k/TicTacToe',
+    image: "/projects/Devolver.jpg",
+    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
    }, 
 ]
 ---
 <div class="flex flex-col gap-y-16">
     {
-        PROJECTS.map(({ image, title, description, tags}) => (
+        PROJECTS.map(({ image, title, description, tags, link}) => (
             <article>
                 <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2" >{title}</h3>
                 <p class="text-lg mb-4 text-pretty" >{description}</p>
@@ -67,11 +83,16 @@ const PROJECTS = [
                         </li>
                     ))}
                 </ul>
-                <img 
-                    class="rounded shadow-2xl shadow-white/10" 
-                    src={image} 
-                    alt={`Captura de pantalla del proyecto ${image}`}
-                />
+                <a 
+                  href={link}
+                  target="_blank"
+                >
+                  <img 
+                      class="rounded shadow-2xl shadow-white/10" 
+                      src={image} 
+                      alt={`Captura de pantalla del proyecto ${image}`}
+                  />
+                </a>
             </article>
         ))
     }
