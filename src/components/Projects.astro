@@ -4,6 +4,8 @@ import JavaScript from "./icons/JavaScript.astro";
 import React from "./icons/React.astro";
 import CSS from "./icons/CSS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import Express from "./icons/Express.astro";
+import Node from "./icons/Node.astro";
 
 const TAGS = {
   HTML: {
@@ -31,6 +33,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-[#003159] text-white",
+    icon: Express,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#20201f] text-white",
+    icon: Node,
+  },
 }
 const PROJECTS = [
    {
@@ -55,7 +67,7 @@ const PROJECTS = [
     link:'https://proyectofs.onrender.com/',
     github:'https://github.com/Ger2k/TicTacToe',
     image: "/projects/Peliculas.jpg",
-    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
+    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.EXPRESS,TAGS.NODE],
    },
    {
     title: "Fanweb de videojuegos independientes",
