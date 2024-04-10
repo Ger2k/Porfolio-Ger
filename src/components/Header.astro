@@ -1,6 +1,11 @@
 ---
 const navItems = [
   {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto",
+  },
+  {
     title: "Estudios",
     label: "estudios",
     url: "/#estudios",
@@ -15,11 +20,7 @@ const navItems = [
     label: "sobre-mi",
     url: "/#sobre-mi",
   },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "/#contacto",
-  },
+  
 ];
 ---
 
@@ -70,7 +71,7 @@ const navItems = [
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1,
+      threshold: 0.2,
     });
 
     sections.forEach((section) => {
