@@ -7,6 +7,7 @@ import Tailwind from "./icons/Tailwind.astro";
 import Express from "./icons/Express.astro";
 import Node from "./icons/Node.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
+import GSAPIcon from "./icons/GSAPIcon.astro";
 
 const TAGS = {
   HTML: {
@@ -49,16 +50,37 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: AstroIcon,
   },
+  GSAP: {
+    name: "GSAP",
+    class: "bg-[#0e2a47] text-white",
+    icon: GSAPIcon,
+  },
 }
 const PROJECTS = [
-  {
+  /* {
     title: "Tienda online con React",
     description: "Práctica basada en una prueba técnica con React, un catálogo de productos con posibilidad de filtrarlos y añadirlos a un carro de la compra mediante el uso del hook 'UseContext' (Work in progress)",
     link:'https://carritoreactger.netlify.app/',
     github:'https://github.com/Ger2k/CarritoReact',
     image: "/projects/ReactShop.webp",
     tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.REACT],
-   }, 
+   }, */ 
+  {
+    title: "Página corporativa Satec",
+    description: "Desarrollo de la página web corporativa para Satec, empresa líder en soluciones tecnológicas. Durante mis prácticas en la empresa desarrollé la nueva versión de su sitio web, utilizando tecnologías modernas como React y Tailwind CSS y Astro. El proyecto se centra en la creación de una experiencia de usuario fluida y atractiva, con un diseño responsivo y optimizado para SEO.",
+    link: "https://www.satec.es/es/",
+    github: "",
+    image: "/projects/Satec.webp",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.ASTRO],
+  },
+  {
+    title: "Landing page GTA VI",
+    description: "Recreación de la landing page oficial del videojuego GTA VI, enfocada en el diseño visual y la fidelidad al original. Se utilizaron animaciones y efectos modernos para captar la esencia del sitio real, como ejercicio de práctica en maquetación y frontend. (Work in progress)",
+    link: "https://685140ee51236b3b227561b0--fanciful-jalebi-f5a28b.netlify.app/",
+    github: "https://github.com/Ger2k/GTA-Landing",
+    image: "/projects/GTA.webp",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.GSAP],
+  },
   {
     title: "Paint Windows 95",
     description: "Web que simula la interfaz de Paint de Windows 95 en el navegador, con algunos cambios y añadidos experimentales por diversión.",
