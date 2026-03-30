@@ -8,6 +8,8 @@ import Express from "./icons/Express.astro";
 import Node from "./icons/Node.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import GSAPIcon from "./icons/GSAPIcon.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Firebase from "./icons/Firebase.astro";
 
 const TAGS = {
   HTML: {
@@ -55,7 +57,17 @@ const TAGS = {
     class: "bg-[#0e2a47] text-white",
     icon: GSAPIcon,
   },
-}
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#1a365d] text-white",
+    icon: TypeScript,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#1a1a2e] text-white",
+    icon: Firebase,
+  },
+};
 const PROJECTS = [
   /* {
     title: "Tienda online con React",
@@ -66,12 +78,7 @@ const PROJECTS = [
     tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.REACT],
    }, 
   {
-    title: "Página corporativa Satec",
-    description: "Desarrollo de la página web corporativa para Satec, empresa líder en soluciones tecnológicas. Durante mis prácticas en la empresa desarrollé la nueva versión de su sitio web, utilizando tecnologías modernas como React, Tailwind CSS y Astro. El proyecto se centra en la creación de una experiencia de usuario fluida y atractiva, con un diseño responsivo y optimizado para SEO.",
-    link: "https://www.satec.es/es/",
-    github: "",
-    image: "/projects/Satec.webp",
-    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.ASTRO],
+    
   },
   {
     title: "Landing page GTA VI",
@@ -82,8 +89,24 @@ const PROJECTS = [
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.GSAP],
   }, */
   {
+    title: "Portal Games Tracker",
+    description:
+      "Aplicación web para registrar, organizar y analizar tu biblioteca de videojuegos completados. Incluye autenticación con Google, operaciones CRUD sobre Firebase Realtime Database, búsqueda de portadas mediante la API de RAWG (protegida con un endpoint servidor), y un dashboard de estadísticas con gráficos interactivos (Recharts). Construida con Astro 6, React 19 y Tailwind 4, con arquitectura por dominios, sistema de componentes propios y 4 temas visuales. Desplegada con SSR en Netlify.",
+    link: "https://jovial-starship-d1c2da.netlify.app/app/",
+    github: "https://github.com/Ger2k/Astro-Portal",
+    image: "/projects/Astro-Portal.webp",
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.REACT,
+      TAGS.ASTRO,
+      TAGS.TAILWIND,
+      TAGS.FIREBASE,
+    ],
+  },
+  {
     title: "Paint Windows 95",
-    description: "Web que simula la interfaz de Paint de Windows 95 en el navegador, con algunos cambios y añadidos experimentales por diversión.",
+    description:
+      "Web que simula la interfaz de Paint de Windows 95 en el navegador, con algunos cambios y añadidos experimentales por diversión.",
     link: "https://paintwindows95.netlify.app/",
     github: "",
     image: "/projects/Paint95.webp",
@@ -91,65 +114,71 @@ const PROJECTS = [
   },
   {
     title: "Poke-like Game",
-    description: "Pequeño juego estilo pokemon, hecho solo con JavaScript Vanilla, curso online de Web Dev Simplified.",
-    link:'https://taupe-cobbler-8957b9.netlify.app/',
-    github:'https://github.com/Ger2k/Pokenot',
+    description:
+      "Pequeño juego estilo pokemon, hecho solo con JavaScript Vanilla, curso online de Web Dev Simplified.",
+    link: "https://taupe-cobbler-8957b9.netlify.app/",
+    github: "https://github.com/Ger2k/Pokenot",
     image: "/projects/Poke.webp",
-    tags: [TAGS.HTML,TAGS.JAVASCRIPT],
-   },
-   {
+    tags: [TAGS.HTML, TAGS.JAVASCRIPT],
+  },
+  {
     title: "Tic-Tac-Toe",
-    description: "3 en raya creado con React para practicar sus conceptos básicos.",
-    link:'https://resplendent-malasada-dc4e00.netlify.app/',
-    github:'https://github.com/Ger2k/TicTacToe',
+    description:
+      "3 en raya creado con React para practicar sus conceptos básicos.",
+    link: "https://resplendent-malasada-dc4e00.netlify.app/",
+    github: "https://github.com/Ger2k/TicTacToe",
     image: "/projects/TicTac.webp",
-    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.REACT],
-   },
-   {
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT],
+  },
+  {
     title: "API de gestión de películas",
-    description: "Completo sistema de gestión de películas desarrollado como proyecto final para el curso Full-Stack de la Escuela CEI. Este proyecto abarca tanto el diseño del frontend como la implementación del backend, utilizando Node.js y Express.js para crear una API robusta alojada en Render.com. Facilita operaciones CRUD sobre una colección de películas, interactuando con una base de datos MongoDB diseñada y administrada personalmente. Un ejemplo integral de desarrollo full-stack moderno. Debido a que es un servicio gratuito puede tardar un poco al entrar por primera vez.",
-    link:'https://proyectofs.onrender.com/',
-    github:'https://github.com/Ger2k/TicTacToe',
+    description:
+      "Completo sistema de gestión de películas desarrollado como proyecto final para el curso Full-Stack de la Escuela CEI. Este proyecto abarca tanto el diseño del frontend como la implementación del backend, utilizando Node.js y Express.js para crear una API robusta alojada en Render.com. Facilita operaciones CRUD sobre una colección de películas, interactuando con una base de datos MongoDB diseñada y administrada personalmente. Un ejemplo integral de desarrollo full-stack moderno. Debido a que es un servicio gratuito puede tardar un poco al entrar por primera vez.",
+    link: "https://proyectofs.onrender.com/",
+    github: "https://github.com/Ger2k/TicTacToe",
     image: "/projects/Peliculas.webp",
-    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.EXPRESS,TAGS.NODE],
-   },
-   {
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.NODE],
+  },
+  {
     title: "Fanweb de videojuegos independientes",
-    description: "Mi primera web, una presentación de 3 videojuegos, cada uno con su estilo propio. Trabajo final para el curso de Diseño Web en la Escuela CEI.",
-    link:'https://idyllic-fenglisu-5c0cb1.netlify.app/',
-    github:'https://github.com/Ger2k/TicTacToe',
+    description:
+      "Mi primera web, una presentación de 3 videojuegos, cada uno con su estilo propio. Trabajo final para el curso de Diseño Web en la Escuela CEI.",
+    link: "https://idyllic-fenglisu-5c0cb1.netlify.app/",
+    github: "https://github.com/Ger2k/TicTacToe",
     image: "/projects/Devolver.webp",
-    tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
-   }, 
-]
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+];
 ---
+
 <div class="flex flex-col gap-y-16">
-    {
-        PROJECTS.map(({ image, title, description, tags, link}) => (
-            <article class="mx-4">
-                <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2" >{title}</h3>
-                <p class="text-lg mb-4 text-pretty" >{description}</p>
-                <ul class="flex flex-wrap gap-2 flex-row mb-2">
-                {tags.map(tag => (
-                        <li>
-                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
-                                <tag.icon class="size-4" /> 
-                                {tag.name}
-                            </span>                 
-                        </li>
-                    ))}
-                </ul>
-                <a 
-                  href={link}
-                  target="_blank"
-                >
-                  <img 
-                      class="rounded shadow-2xl shadow-white/10" 
-                      src={image} 
-                      alt={`Captura de pantalla del proyecto ${image}`}
-                  />
-                </a>
-            </article>
-        ))
-    }
+  {
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+      <article class="mx-4">
+        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+          {title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex flex-wrap gap-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <a href={link} target="_blank">
+          <img
+            class="rounded shadow-2xl shadow-white/10"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+          />
+        </a>
+      </article>
+    ))
+  }
 </div>
