@@ -10,6 +10,7 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import GSAPIcon from "./icons/GSAPIcon.astro";
 import TypeScript from "./icons/TypeScript.astro";
 import Firebase from "./icons/Firebase.astro";
+import Figma from "./icons/Figma.astro";
 
 const TAGS = {
   HTML: {
@@ -67,6 +68,11 @@ const TAGS = {
     class: "bg-[#1a1a2e] text-white",
     icon: Firebase,
   },
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#1a1a2e] text-white",
+    icon: Figma,
+  },
 };
 const PROJECTS = [
   /* {
@@ -102,6 +108,15 @@ const PROJECTS = [
       TAGS.TAILWIND,
       TAGS.FIREBASE,
     ],
+  },
+  {
+    title: "Web Corporativa SATEC",
+    description:
+      "Participación activa en el rediseño integral de la web corporativa de SATEC. Desarrollo de interfaces modernas y accesibles utilizando React, TypeScript y Astro. Responsable de la maquetación fiel de componentes desde Figma, implementación de internacionalización (i18n), optimización del rendimiento de carga y desarrollo de componentes reutilizables para mejorar la mantenibilidad del código.",
+    link: "https://www.satec.es/", 
+    github: "", 
+    image: "/projects/Satec.webp",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.ASTRO, TAGS.TAILWIND, TAGS.FIGMA],
   },
   {
     title: "Paint Windows 95",
